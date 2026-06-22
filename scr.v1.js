@@ -1,3 +1,11 @@
+function fillProduct(productName){
+    document.getElementById("product").value = productName;
+
+    document.getElementById("contact").scrollIntoView({
+        behavior:"smooth"
+    });
+}
+
 document.getElementById("contactForm").addEventListener("submit", function(e){
     e.preventDefault();
 
@@ -5,7 +13,7 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
     let product = document.getElementById("product").value;
     let message = document.getElementById("message").value;
 
-    let phone = "201555291925";
+    let phone = "201505243520";
 
     let text = `🟢 طلب جديد:
 
@@ -13,7 +21,6 @@ document.getElementById("contactForm").addEventListener("submit", function(e){
 🪑 المنتج: ${product}
 💬 الاستفسار: ${message}`;
 
-    let url = "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
-
-    window.location.href = url;
+    window.location.href =
+        "https://wa.me/" + phone + "?text=" + encodeURIComponent(text);
 });
